@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>画一个地图编辑器</title>
+</head>
+<body>
+    <style>
+        .cell{
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            left: 7px;
+            background-color: gray;
+            border-bottom: 1px solid #fff;
+            border-right: 1px solid #fff;
+            vertical-align: middle;
+        }
+        #container{
+            width: 701px;
+        }
+    </style>
+<div id="container"></div>
+<button onclick="localStorage['map'] = JSON.stringify(map)">保存地图</button>
+<script>
+    let map = localStorage.getItem('map') ? JSON.parse(localStorage.getItem('map')) : Array(10000).fill(0);
+    let container = document.getElementById('container');
+    for (let i = 0; i < 100; i++) {
+        for (let j = 0; j < 100; j++) {
+            let cell =document.createElement('div');
+            cell.classList.add('cell');
+            if (map[3*i + j] === 1) {
+              cell.style.backgroundColor = 'black';
+            }
+            cell.addEventListener('mousemove',() =>{
+                if (mousedown) {
+                  if (clear)
+
+                  }else {
+                  }
+                }
+            },false)
+        }
+    }
+</script>
+</body>
+</html>
