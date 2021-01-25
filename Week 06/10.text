@@ -1,0 +1,8 @@
+//Object.prototype: 作为所有正常对象的默认原型，不能再给他设置原型了
+1.Array: Array的 length 属性根据最大的下标自动发生变化。
+2.Arguments：arguments 的非负整数型下标属性跟对应的变量联动
+3.Object.prototype: 作为所有正常对象的默认原型，不能再给他设置原型了
+4.String：为了支持下标运算，String的正整数属性访问会去字符串里查找
+5.模块的namespace对象：特殊的地方非常多，跟一般对象完全不一样，尽量用于import
+6.类型数组和数组缓冲区：跟内存块相关联，下标运算比较特殊
+7.bind 后的 function：跟原来的函数相关联
